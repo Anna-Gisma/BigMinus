@@ -31,13 +31,26 @@ def BigMinus(s1, s2):
             x = str((int(big[i]) + 10) - int(sml[i]))
             big[i+1] = str(int(big[i+1]) - 1)
             new.append(x)
+    
+    
     for i in range(len(new)):
         big[i] = new[i]
+    big = ''.join(big)
+    #print('big', big)
     for i in reversed(big):
         res.append(i)
-    strk_res = ''.join(res)
-    
-    return strk_res
+    strk_res = int(''.join(res))
+    result = str(strk_res)
+    return result
 
 
-
+import random
+strk = []
+for i in range(10**2):
+    a = str(random.randint(1, 9))
+    strk.append(a)
+strkstr = ''.join(strk)
+s1 = '12345'
+s2 = '45'
+#print('str', strkstr)
+print('big', BigMinus(s1, s2))
