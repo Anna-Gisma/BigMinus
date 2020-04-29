@@ -43,14 +43,3 @@ def BigMinus(s1, s2):
     result = str(strk_res)
     return result
 
-
-import random
-strk = []
-for i in range(10**2):
-    a = str(random.randint(1, 9))
-    strk.append(a)
-strkstr = ''.join(strk)
-s1 = '12345'
-s2 = '45'
-#print('str', strkstr)
-print('big', BigMinus(s1, s2))
